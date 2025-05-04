@@ -1,3 +1,3 @@
-export const description = "Una galería de componentes UI facíl de usar para tus sitios webs hechos con tailwindCSS"
-export const siteName = "UiComponents"
-export const imageMetaAlt = "UiComponents | Galería de componentes UI facíl de usar para tus sitios webs hechos con tailwindCSS"
+export const description = "Web oficial de GlaciarMC, un servidor de minecraft con todo lo que buscas."
+export const siteName = "GlaciarMC"
+export const imageMetaAlt = "GlaciarMC | Un servidor de minecraft con todo lo que buscas."
