@@ -1,0 +1,109 @@
+---
+import RocketIcon from "./icons/rocketIcon.astro"
+import DiscordIcon from "./icons/discordIcon.astro"
+---
+<section class="relative flex flex-col mt-20 pb-24 px-10 sm:px-10 scroll-mt-36 justify-center items-center">
+    <header class="flex flex-col items-center justify-center dark:text-gray-300 text-gray-800 my-10">
+        <div class="text-center mb-5">
+            <img class="size-56 animate-float animate-iteration-count-infinite" src="/logo.png" alt="">
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-10 w-full max-w-4xl">
+
+            <div class="h-full relative group overflow-hidden rounded-xl shadow-md p-4 bg-gradient-to-r from-[#7ADBF7] via-[#4AB5E4] to-[#2A6BA9] flex flex-col justify-center items-start hover:scale-99 transition-all duration-400">
+    
+                <div class="absolute -top-10 -left-10 w-40 h-40 bg-sky-600 rounded-full blur-2xl transition-transform duration-1000 group-hover:translate-x-4 group-hover:translate-y-4"></div>
+                <div class="absolute bottom-0 right-0 w-32 h-32 bg-sky-900 rounded-full blur-2xl transition-transform duration-1000 group-hover:-translate-x-4 group-hover:-translate-y-4"></div>
+
+                <h2 class="text-2xl font-semibold text-gray-800 mb-2 z-10 relative font-Chakra">¡Conéctate ahora!</h2>
+                <p class="text-sm mb-2 text-gray-800 z-10 w-[330px] text-pretty">¡Juega a nuestras modalidades y haz nuevos amigos!</p>
+                <div class="flex items-center space-x-2 z-10 relative">
+                    <pre class="code flex gap-2 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-300 rounded-md p-2 shadow-md items-center justify-center">
+                        <code class="font-mono bg-gradient-to-r from-[#7ADBF7] via-[#4AB5E4] to-[#2A6BA9] bg-clip-text text-transparent">play.glaciarmc.pro</code>
+                        <button class="copy-button text-white px-1 rounded-md hover:bg-slate-600/80 transition-colors duration-300 cursor-pointer"><i class="fa fa-copy"></i></button>
+                    </pre>
+                </div>
+                <div class="group-hover:translate-x-[-20px] group-hover:translate-y-[-20px] transition-all duration-500 absolute bottom-[-30px] right-[-40px] text-sky-900/50 rotate-270">
+                    <RocketIcon class="size-30"/>
+                </div>
+            </div>
+                
+            <div class="h-full relative group overflow-hidden rounded-xl shadow-md p-4 bg-gradient-to-r from-[#7ADBF7] via-[#4AB5E4] to-[#2A6BA9] flex flex-col justify-center items-start hover:scale-99 transition-all duration-400">
+    
+                <div class="absolute -top-10 -left-10 w-40 h-40 bg-sky-600 rounded-full blur-2xl transition-transform duration-1000 group-hover:translate-x-4 group-hover:translate-y-4"></div>
+                <div class="absolute bottom-0 right-0 w-32 h-32 bg-sky-900 rounded-full blur-2xl transition-transform duration-1000 group-hover:-translate-x-4 group-hover:-translate-y-4"></div>
+
+                <h2 class="text-2xl font-semibold text-gray-800 mb-2 z-10 relative font-Chakra">¡Únete ahora!</h2>
+                <p class="text-sm mb-2 text-gray-800 z-10 w-[330px] text-pretty">¡Explora nuestra cumunidad y se parte de ella!</p>
+                <div class="flex items-center my-2 space-x-2 z-10 relative">
+            
+                    <a  
+                    href="https://discord.gg/7hCs6ChT"
+                    class="flex justify-center gap-2 items-center text-white mx-auto shadow-xl text-sm sm:text-lg bg-gray-700/10 backdrop-blur-md lg:font-semibold isolation-auto border-gray-600 group-hover:border-gray-700 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-emerald-500 hover:text-gray-50 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-4 py-2 hover:scale-110 transition-all duration-300 overflow-hidden border rounded-full group"
+                    > Unirse
+                    <svg
+                    class="w-8 h-8 justify-end group-hover:rotate-45 group-hover:bg-gray-500/20 ease-linear duration-300 rounded-full border border-gray-500 group-hover:border-none p-2 rotate-90"
+                    viewBox="0 0 16 19"
+                    xmlns="http://www.w3.org/2000/svg"
+                    >
+                    <path
+                        d="M7 18C7 18.5523 7.44772 19 8 19C8.55228 19 9 18.5523 9 18H7ZM8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893L0.928932 6.65685C0.538408 7.04738 0.538408 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292893ZM9 18L9 1H7L7 18H9Z"
+                        class="fill-gray-200 group-hover:fill-gray-300"
+                        >
+                    </path>
+                    </svg>
+                    </a>
+                </div>
+                <span class="absolute top-2 right-2 bg-slate-300/50 px-2 rounded-full flex items-center gap-1.5 text-white text-lg font-semibold">
+                    <i class="fa fa-users"></i>
+                    <span id="user-counter">0</span>
+                </span>
+                <div class="group-hover:translate-x-[-20px] group-hover:translate-y-[-20px] transition-all duration-500 absolute bottom-[-30px] right-[-40px] text-sky-900/50 rotate-45">
+                    <DiscordIcon class="size-30"/>
+                </div>
+            </div>
+
+            <div class="h-full col-span-1 sm:col-span-2 rounded-xl overflow-hidden">
+                <img class="mask-b-from-20% mask-b-to-80%" src="/placeholder-1.png" alt="Imagen del Servidor" class="w-full h-full object-cover">
+            </div>
+        </div>
+    </header>
+</section>
+  
+<script is:inline>
+
+    const target = 100; // valor final
+    const duration = 1500; // duración de la animación en ms
+    const frameRate = 60;
+    const steps = Math.round(duration / (1000 / frameRate));
+    const increment = target / steps;
+
+    let current = 0;
+    const counterElement = document.getElementById("user-counter");
+
+    const interval = setInterval(() => {
+    current += increment;
+    if (current >= target) {
+        current = target;
+        clearInterval(interval);
+    }
+    counterElement.textContent = Math.floor(current);
+    }, 1000 / frameRate);
+
+    const code = document.querySelector(".code");
+    const copyBtn = document.querySelector('.copy-button');
+    const copyIcon = document.querySelector('.fa-copy');
+    
+    copyBtn.addEventListener('click', () => {
+        navigator.clipboard.writeText(code.textContent)
+            .then(() => {
+                copyIcon.classList = "fa fa-check";
+                setTimeout(() => {
+                    copyIcon.classList = "fa fa-copy";
+                }, 2000);
+            })
+            .catch(err => {
+                console.error("An error occurred while copying the text: ", err);
+            });
+    });
+    
+</script>

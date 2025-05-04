@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+@plugin "@midudev/tailwind-animations";
+
+@theme{
+    --font-Chakra: 'Chakra Petch', sans-serif;
+}
