@@ -1,5 +1,7 @@
 ---
 
+import ShopIcon from './icons/shopIcon.astro';
+
 interface Props {
 	actualPage?: string;
 }
@@ -62,7 +64,7 @@ const NAVIGATIONS = [
         </ul>
     </nav>
 		<div class="group mt-2">
-            <a class="font-Chakra bg-gradient-to-r from-sky-600 to-sky-800 hover:saturate-150 hover:scale-105 transition-all duration-300 rounded-md flex gap-2 justify-center items-center px-2 py-2 cursor-pointer" target="_blank"><i class="fas fa-shop group-hover:-rotate-5 transition-transform duration-300"></i><span class="hidden sm:flex">Tienda</span></a>
+            <a class="font-Chakra bg-gradient-to-r from-sky-600 to-sky-800 hover:saturate-150 hover:scale-105 transition-all duration-300 rounded-md flex gap-2 justify-center items-center px-2 py-2 cursor-pointer" target="_blank"><ShopIcon class="size-5 group-hover:-rotate-5 transition-transform duration-300"/><span class="hidden sm:flex">Tienda</span></a>
 		</div>
 	</div>
 </header>
@@ -86,22 +88,6 @@ const NAVIGATIONS = [
 
 
 <script is:inline>
-
-	const dropdowns = document.querySelectorAll('#navbar-dropdown');
-    dropdowns.forEach((dropdown) => {
-        const dropdownMenu = dropdown.nextElementSibling;
-        dropdown.addEventListener('click', () => {
-            dropdownMenu.classList.toggle('hidden');
-        });
-
-        document.addEventListener('click', (event) => {
-        if (!dropdown.contains(event.target)) {
-            dropdownMenu.classList.add('hidden');
-		}
-	});
-
-});
-
 
     const hamburgerMenu = document.getElementById('hamburger-menu');
     const mobileMenu = document.getElementById('mobile-menu');

@@ -1,6 +1,9 @@
 ---
 import RocketIcon from "./icons/rocketIcon.astro"
 import DiscordIcon from "./icons/discordIcon.astro"
+import UsersIcon from "./icons/usersIcon.astro"
+import CopyIcon from "./icons/copyIcon.astro"
+import CheckIcon from "./icons/checkIcon.astro"
 ---
 <section id="inicio" class="relative flex flex-col mt-20 pb-5 px-10 sm:px-10 scroll-mt-36 justify-center items-center">
     <header class="hero flex flex-col items-center justify-center dark:text-gray-300 text-gray-800 my-10">
@@ -19,7 +22,7 @@ import DiscordIcon from "./icons/discordIcon.astro"
                 <div class="flex items-center space-x-2 z-10 relative">
                     <pre class="code flex gap-2 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-300 rounded-md p-2 shadow-md items-center justify-center">
                         <code class="font-mono bg-gradient-to-r from-[#7ADBF7] via-[#4AB5E4] to-[#2A6BA9] bg-clip-text text-transparent">play.glaciarmc.pro</code>
-                        <button class="copy-button text-white px-1 rounded-md hover:bg-slate-600/80 transition-colors duration-300 cursor-pointer"><i class="fa fa-copy"></i></button>
+                        <button class="copy-button text-white px-1 rounded-md hover:bg-slate-600/80 transition-colors duration-300 cursor-pointer"><CopyIcon class="copy-icon size-4"/><CheckIcon class="copy-icon-check hidden size-4"/></button>
                     </pre>
                 </div>
                 <div class="group-hover:translate-x-[-20px] group-hover:translate-y-[-20px] transition-all duration-500 absolute bottom-[-30px] right-[-40px] text-sky-900/50 rotate-270">
@@ -54,7 +57,7 @@ import DiscordIcon from "./icons/discordIcon.astro"
                     </a>
                 </div>
                 <span class="group/counter absolute top-2 right-2 bg-slate-300/50 px-2 rounded-full flex items-center gap-1.5 text-white text-lg font-semibold">
-                    <i class="fa fa-users"></i>
+                    <UsersIcon class="size-6 text-white"/>
                     <span id="user-counter">0</span>
                 
                     <span class="absolute top-0.5 mr-2 right-34 translate-x-1/2 bg-slate-300/50 text-white text-xs px-2 py-1 rounded opacity-0 group-hover/counter:opacity-100 transition pointer-events-none z-50 whitespace-nowrap">
@@ -72,24 +75,6 @@ import DiscordIcon from "./icons/discordIcon.astro"
         </div>
     </header>
 </section>
-
-<script is:inline type="module">
-    import { animate, inView } from "https://cdn.jsdelivr.net/npm/motion@12.9.0/+esm"
-  
-    inView(".hero .logo", (element) => {
-      animate(
-        element,
-        { opacity: [0, 1], y: [-50, 0] },
-        { duration: 0.8, easing: 'ease-out' }
-      )
-    }, { once: true })
-  
-    for (let i = 1; i <= 4; i++) {
-  inView(`.bento-el-${i}`, (el) => {
-    el.classList.add('animate-fade-in');
-  }, { once: true });
-}
-</script>
   
 <script is:inline>
 
@@ -113,14 +98,17 @@ import DiscordIcon from "./icons/discordIcon.astro"
 
     const code = document.querySelector(".code");
     const copyBtn = document.querySelector('.copy-button');
-    const copyIcon = document.querySelector('.fa-copy');
+    const copyIcon = document.querySelector('.copy-icon');
+    const copyIconCheck = document.querySelector('.copy-icon-check');
     
     copyBtn.addEventListener('click', () => {
         navigator.clipboard.writeText(code.textContent)
             .then(() => {
-                copyIcon.classList = "fa fa-check";
+                copyIcon.classList.toggle("hidden")
+                copyIconCheck.classList.toggle("hidden")
                 setTimeout(() => {
-                    copyIcon.classList = "fa fa-copy";
+                    copyIcon.classList.toggle("hidden")
+                    copyIconCheck.classList.toggle("hidden")
                 }, 2000);
             })
             .catch(err => {
