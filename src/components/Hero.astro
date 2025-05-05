@@ -2,7 +2,7 @@
 import RocketIcon from "./icons/rocketIcon.astro"
 import DiscordIcon from "./icons/discordIcon.astro"
 ---
-<section class="relative flex flex-col mt-20 pb-24 px-10 sm:px-10 scroll-mt-36 justify-center items-center">
+<section id="inicio" class="relative flex flex-col mt-20 pb-5 px-10 sm:px-10 scroll-mt-36 justify-center items-center">
     <header class="flex flex-col items-center justify-center dark:text-gray-300 text-gray-800 my-10">
         <div class="text-center mb-5">
             <img class="size-56 animate-float animate-iteration-count-infinite" src="/logo.png" alt="">
@@ -15,7 +15,7 @@ import DiscordIcon from "./icons/discordIcon.astro"
                 <div class="absolute bottom-0 right-0 w-32 h-32 bg-sky-900 rounded-full blur-2xl transition-transform duration-1000 group-hover:-translate-x-4 group-hover:-translate-y-4"></div>
 
                 <h2 class="text-2xl font-semibold text-gray-800 mb-2 z-10 relative font-Chakra">¡Conéctate ahora!</h2>
-                <p class="text-sm mb-2 text-gray-800 z-10 w-[330px] text-pretty">¡Juega a nuestras modalidades y haz nuevos amigos!</p>
+                <p class="text-sm mb-2 text-gray-800 z-10 sm:w-[330px] text-pretty">¡Juega a nuestras modalidades y haz nuevos amigos!</p>
                 <div class="flex items-center space-x-2 z-10 relative">
                     <pre class="code flex gap-2 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-300 rounded-md p-2 shadow-md items-center justify-center">
                         <code class="font-mono bg-gradient-to-r from-[#7ADBF7] via-[#4AB5E4] to-[#2A6BA9] bg-clip-text text-transparent">play.glaciarmc.pro</code>
@@ -33,7 +33,7 @@ import DiscordIcon from "./icons/discordIcon.astro"
                 <div class="absolute bottom-0 right-0 w-32 h-32 bg-sky-900 rounded-full blur-2xl transition-transform duration-1000 group-hover:-translate-x-4 group-hover:-translate-y-4"></div>
 
                 <h2 class="text-2xl font-semibold text-gray-800 mb-2 z-10 relative font-Chakra">¡Únete ahora!</h2>
-                <p class="text-sm mb-2 text-gray-800 z-10 w-[330px] text-pretty">¡Explora nuestra cumunidad y se parte de ella!</p>
+                <p class="text-sm mb-2 text-gray-800 z-10 sm:w-[330px] text-pretty">¡Explora nuestra cumunidad y se parte de ella!</p>
                 <div class="flex items-center my-2 space-x-2 z-10 relative">
             
                     <a  
@@ -53,10 +53,14 @@ import DiscordIcon from "./icons/discordIcon.astro"
                     </svg>
                     </a>
                 </div>
-                <span class="absolute top-2 right-2 bg-slate-300/50 px-2 rounded-full flex items-center gap-1.5 text-white text-lg font-semibold">
+                <span class="group/counter absolute top-2 right-2 bg-slate-300/50 px-2 rounded-full flex items-center gap-1.5 text-white text-lg font-semibold">
                     <i class="fa fa-users"></i>
                     <span id="user-counter">0</span>
-                </span>
+                
+                    <span class="absolute top-0.5 mr-2 right-34 translate-x-1/2 bg-slate-300/50 text-white text-xs px-2 py-1 rounded opacity-0 group-hover/counter:opacity-100 transition pointer-events-none z-50 whitespace-nowrap">
+                      Usuarios conectados
+                    </span>
+                  </span>
                 <div class="group-hover:translate-x-[-20px] group-hover:translate-y-[-20px] transition-all duration-500 absolute bottom-[-30px] right-[-40px] text-sky-900/50 rotate-45">
                     <DiscordIcon class="size-30"/>
                 </div>
@@ -71,8 +75,8 @@ import DiscordIcon from "./icons/discordIcon.astro"
   
 <script is:inline>
 
-    const target = 100; // valor final
-    const duration = 1500; // duración de la animación en ms
+    const target = Math.floor(Math.random() * 200);
+    const duration = 1500; 
     const frameRate = 60;
     const steps = Math.round(duration / (1000 / frameRate));
     const increment = target / steps;
