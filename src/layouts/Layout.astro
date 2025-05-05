@@ -38,28 +38,78 @@ const { title } = Astro.props;
 	<meta name="twitter:image" content="https://glaciarmc.vercel.app/og/og.png" />
 	<meta name="twitter:image:alt" content={imageMetaAlt} />
 	<meta name="robots" content="max-image-preview:large" />
-	<script type="module" src="src/scripts/animations.js"></script>
     <title>{title}</title>
 </head>
-	<body class="dark:bg-slate-950 bg-white">
-		<div class="fixed inset-0 -z-10 w-full min-h-screen dark:bg-slate-950 bg-white">
-			<div class="absolute inset-0 bg-white dark:bg-gray-950 overflow-hidden">
-				<svg class=" absolute inset-0 h-full w-full opacity-20 dark:opacity-30" viewBox="0 0 100 100" preserveAspectRatio="none">
-					<path d="M0,20 Q25,40 50,20 Q75,0 100,20 V100 H0 Z" class="animate-slide-up-fade animate-delay-100 fill-blue-100 dark:fill-blue-900/30" />
-					<path d="M0,30 Q25,50 50,30 Q75,10 100,30 V100 H0 Z" class="animate-slide-up-fade animate-delay-200 fill-blue-200 dark:fill-blue-800/30" />
-					<path d="M0,40 Q25,60 50,40 Q75,20 100,40 V100 H0 Z" class="animate-slide-up-fade animate-delay-300 fill-blue-300 dark:fill-blue-700/30" />
-					<path d="M0,50 Q25,70 50,50 Q75,30 100,50 V100 H0 Z" class="animate-slide-up-fade animate-delay-400 fill-blue-400 dark:fill-blue-600/30" />
-					<path d="M0,60 Q25,80 50,60 Q75,40 100,60 V100 H0 Z" class="animate-slide-up-fade animate-delay-500 fill-blue-500 dark:fill-blue-500/30" />
-					<path d="M0,70 Q25,90 50,70 Q75,50 100,70 V100 H0 Z" class="animate-slide-up-fade animate-delay-600 fill-blue-600 dark:fill-blue-400/30" />
-					<path d="M0,80 Q25,100 50,80 Q75,60 100,80 V100 H0 Z" class="animate-slide-up-fade animate-delay-700 fill-blue-700 dark:fill-blue-300/30" />
-				</svg>
-			  </div>
+<body class="dark:bg-slate-950 bg-white">
+	<div class="fixed inset-0 -z-10 w-full min-h-screen dark:bg-slate-950 bg-white">
+		<div class="absolute inset-0 bg-white dark:bg-gray-950 overflow-hidden">
+			<svg class=" absolute inset-0 h-full w-full opacity-20 dark:opacity-30" viewBox="0 0 100 100" preserveAspectRatio="none">
+				<path d="M0,20 Q25,40 50,20 Q75,0 100,20 V100 H0 Z" class="animate-slide-up-fade animate-delay-100 fill-blue-100 dark:fill-blue-900/30" />
+				<path d="M0,30 Q25,50 50,30 Q75,10 100,30 V100 H0 Z" class="animate-slide-up-fade animate-delay-200 fill-blue-200 dark:fill-blue-800/30" />
+				<path d="M0,40 Q25,60 50,40 Q75,20 100,40 V100 H0 Z" class="animate-slide-up-fade animate-delay-300 fill-blue-300 dark:fill-blue-700/30" />
+				<path d="M0,50 Q25,70 50,50 Q75,30 100,50 V100 H0 Z" class="animate-slide-up-fade animate-delay-400 fill-blue-400 dark:fill-blue-600/30" />
+				<path d="M0,60 Q25,80 50,60 Q75,40 100,60 V100 H0 Z" class="animate-slide-up-fade animate-delay-500 fill-blue-500 dark:fill-blue-500/30" />
+				<path d="M0,70 Q25,90 50,70 Q75,50 100,70 V100 H0 Z" class="animate-slide-up-fade animate-delay-600 fill-blue-600 dark:fill-blue-400/30" />
+				<path d="M0,80 Q25,100 50,80 Q75,60 100,80 V100 H0 Z" class="animate-slide-up-fade animate-delay-700 fill-blue-700 dark:fill-blue-300/30" />
+			</svg>
 		</div>
-		<Header />
-		<slot />
-		<!-- <Footer /> -->
-	</body>
+	</div>
+	<Header />
+	<slot />
+	<!-- <Footer /> -->
+</body>
 </html>
+<script type="module">
+
+import { animate, inView } from "https://cdn.jsdelivr.net/npm/motion@12.9.0/+esm"
+  
+// HERO
+
+inView(".hero .logo", (element) => {
+    animate(
+      element,
+      { opacity: [0, 1], y: [-50, 0] },
+      { duration: 0.8, easing: 'ease-out' }
+    )
+  }, { once: true })
+
+  for (let i = 1; i <= 4; i++) {
+inView(`.bento-el-${i}`, (el) => {
+  el.classList.add('animate-fade-in');
+}, { once: true });
+}
+
+// ABOUT
+inView(".about header", (element) => {
+  animate(
+    element,
+    { opacity: [0, 1], y: [-50, 0] },
+    { duration: 0.8, easing: 'ease-out' }
+  )
+}, { once: true })
+
+inView(".about .footer", (element) => {
+  animate(
+    element,
+    { opacity: [0, 1], y: [-50, 0] },
+    { duration: 1, easing: 'ease-out' }
+  )
+}, { once: true })
+
+for (let i = 1; i <= 4; i++) {
+inView(`.feature-${i}`, (el) => {
+el.classList.add('animate-fade-in');
+}, { once: true });
+}
+
+// MODALITIES
+
+inView(".carousel-container", (el) => {
+    el.classList.add('animate-fade-in');
+    }, { once: true });
+
+
+</script>
 
 <style is:global>
 	:root {
