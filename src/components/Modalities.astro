@@ -1,0 +1,260 @@
+
+<section id="modalidades" class="about relative flex flex-col h-screen pb-28 px-10 sm:px-10 justify-center items-center overflow-hidden">
+
+    <header class="flex flex-col items-center justify-center dark:text-gray-300 text-gray-800 my-10">
+      <div class="text-center mt-30">
+        <h1 class="text-4xl sm:text-5xl font-Chakra font-bold bg-gradient-to-r from-[#7ADBF7] via-[#4AB5E4] to-[#2A6BA9] bg-clip-text text-transparent">Modalidades</h1>
+      </div>
+    </header>
+
+      <div class="flex flex-col sm:flex-row mb-2 max-w-5xl justify-center items-center">
+        
+        <div class="footer px-6 py-2">
+            <h2 class="text-2xl font-bold text-gray-800 dark:text-white font-Chakra mb-3 text-center">Una gran variedad</h2>
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-center w-full sm:w-2xl [&>strong]:text-sky-400">
+                <strong>GlaciarMC</strong> tiene varias modalidades en las que podras disfrutar jugando solo o con tus amigos. <strong>Aventurate en este extenso mundo</strong> </p>
+        </div>
+
+    </div>
+
+    <div class="w-full max-w-6xl mx-auto">
+        <div class="carousel-container animate-delay-250 relative">
+
+            <button class="nav-button cursor-pointer absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center z-20 text-white touch-manipulation" onclick="prevSlide()" title="Previous slide">
+                <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+            </button>
+            
+            <button class="nav-button cursor-pointer absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center z-20 text-white touch-manipulation" onclick="nextSlide()" title="Next slide">
+                <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+            </button>
+
+            <div class="carousel-track relative h-[400px] sm:h-[500px] md:h-[600px] overflow-hidden">
+
+                <div class="carousel-item active absolute top-0 left-0 w-full h-full">
+                    <div class="w-full h-full p-4 sm:p-8">
+                        <div class="w-full h-full rounded-xl sm:rounded-2xl overflow-hidden relative group">
+                            <img src="/placeholder-mode-1.jpg" alt="Geometric art installation" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                            <div class="absolute inset-0 bg-gradient-to-br from-violet-500/40 to-purple-500/40 mix-blend-overlay"></div>
+                            <div class="absolute inset-x-0 bottom-0 p-4 sm:p-8 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
+                                <h3 class="text-white text-xl sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-3">Survival</h3>
+                                <p class="text-gray-200 text-sm sm:text-base md:text-lg max-w-2xl">Donde la imaginación fluye, donde los recursos son limitados y la creatividad es tu mejor herramienta. Construye, explora y sobrevive en un mundo lleno de desafíos y aventuras.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item next absolute top-0 left-0 w-full h-full">
+                    <div class="w-full h-full p-4 sm:p-8">
+                        <div class="w-full h-full rounded-xl sm:rounded-2xl overflow-hidden relative group">
+                            <img src="/placeholder-mode-2.jpg" alt="Futuristic tech setup" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                            <div class="absolute inset-0 bg-gradient-to-br from-fuchsia-500/40 to-pink-500/40 mix-blend-overlay"></div>
+                            <div class="absolute inset-x-0 bottom-0 p-4 sm:p-8 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
+                                <h3 class="text-white text-xl sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-3">SkyBlock</h3>
+                                <p class="text-gray-200 text-sm sm:text-base md:text-lg max-w-2xl">Un paso en falso y al vacío. En este desafiante modo, comienza con recursos limitados en una pequeña isla flotante. Amplía tu territorio, gestiona tus recursos con cuidado y demuestra tu habilidad para sobrevivir en las alturas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item next absolute top-0 left-0 w-full h-full">
+                    <div class="w-full h-full p-4 sm:p-8">
+                        <div class="w-full h-full rounded-xl sm:rounded-2xl overflow-hidden relative group">
+                            <img src="/placeholder-mode-3.jpg" alt="Futuristic tech setup" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                            <div class="absolute inset-0 bg-gradient-to-br from-fuchsia-500/40 to-pink-500/40 mix-blend-overlay"></div>
+                            <div class="absolute inset-x-0 bottom-0 p-4 sm:p-8 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
+                                <h3 class="text-white text-xl sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-3">PvP</h3>
+                                <p class="text-gray-200 text-sm sm:text-base md:text-lg max-w-2xl">Aquí la tranquilidad es finita. Prepárate para enfrentarte a otros jugadores en intensas batallas donde solo los más hábiles sobreviven. Demuestra tu destreza, estrategia y valentía en este emocionante modo de juego.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            <div class="absolute bottom-2 sm:bottom-4 left-1/2 -translate-x-1/2 flex gap-1 sm:gap-2 z-20">
+                <button class="w-8 sm:w-12 h-1 sm:h-1.5 rounded-full bg-white/40 hover:bg-white/60 transition-colors" title="Go to slide 1"></button>
+                <button class="w-8 sm:w-12 h-1 sm:h-1.5 rounded-full bg-white/20 hover:bg-white/60 transition-colors" title="Go to slide 2"></button>
+                <button class="w-8 sm:w-12 h-1 sm:h-1.5 rounded-full bg-white/20 hover:bg-white/60 transition-colors" title="Go to slide 3"></button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .carousel-container {
+        perspective: 1000px;
+        touch-action: pan-y pinch-zoom;
+    }
+
+    .carousel-track {
+        transform-style: preserve-3d;
+        transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .carousel-item {
+        backface-visibility: hidden;
+        transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .carousel-item.active {
+        opacity: 1;
+        transform: scale(1) translateZ(0);
+    }
+
+    @media (max-width: 640px) {
+        .carousel-item.prev {
+            opacity: 0;
+            transform: scale(0.8) translateX(-50%) translateZ(-100px);
+        }
+
+        .carousel-item.next {
+            opacity: 0;
+            transform: scale(0.8) translateX(50%) translateZ(-100px);
+        }
+    }
+
+    @media (min-width: 641px) {
+        .carousel-item.prev {
+            opacity: 0.7;
+            transform: scale(0.9) translateX(-100%) translateZ(-100px);
+        }
+
+        .carousel-item.next {
+            opacity: 0.7;
+            transform: scale(0.9) translateX(100%) translateZ(-100px);
+        }
+    }
+
+    .carousel-item.hidden {
+        opacity: 0;
+        transform: scale(0.8) translateZ(-200px);
+    }
+
+    .nav-button {
+        transition: all 0.3s;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+    }
+
+    @media (hover: hover) {
+        .nav-button:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.1);
+        }
+    }
+
+    .nav-button:active {
+        transform: scale(0.95);
+    }
+
+</style>
+
+<script is:inline type="module">
+    import {inView } from "https://cdn.jsdelivr.net/npm/motion@12.9.0/+esm"
+  
+  inView(".carousel-container", (el) => {
+    el.classList.add('animate-fade-in');
+    }, { once: true });
+
+  </script>
+  
+
+<script is:inline>
+
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel-item');
+    const indicators = document.querySelectorAll('.bottom-2 button, .bottom-4 button');
+    let autoAdvanceTimer;
+    let touchStartX = 0;
+    let touchEndX = 0;
+    const carousel = document.querySelector('.carousel-track');
+
+    // Add touch events for swipe
+    carousel.addEventListener('touchstart', e => {
+        touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    carousel.addEventListener('touchend', e => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    }, { passive: true });
+
+    function handleSwipe() {
+        const swipeThreshold = 50;
+        const diff = touchStartX - touchEndX;
+
+        if (Math.abs(diff) > swipeThreshold) {
+            if (diff > 0) {
+                nextSlide();
+            } else {
+                prevSlide();
+            }
+        }
+    }
+
+    function updateSlides() {
+        slides.forEach((slide, index) => {
+            slide.className = 'carousel-item absolute top-0 left-0 w-full h-full';
+            if (index === currentSlide) {
+                slide.classList.add('active');
+            } else if (index === (currentSlide + 1) % slides.length) {
+                slide.classList.add('next');
+            } else if (index === (currentSlide - 1 + slides.length) % slides.length) {
+                slide.classList.add('prev');
+            } else {
+                slide.classList.add('hidden');
+            }
+        });
+
+        // Update indicators
+        indicators.forEach((indicator, index) => {
+            indicator.className = `w-8 sm:w-12 h-1 sm:h-1.5 rounded-full transition-colors ${
+                index === currentSlide ? 'bg-white/40' : 'bg-white/20'
+            } hover:bg-white/60`;
+        });
+    }
+
+    function resetAutoAdvance() {
+        clearInterval(autoAdvanceTimer);
+        autoAdvanceTimer = setInterval(nextSlide, 5000);
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        updateSlides();
+        resetAutoAdvance();
+    }
+
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        updateSlides();
+        resetAutoAdvance();
+    }
+
+    // Add click handlers to indicators
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => {
+            currentSlide = index;
+            updateSlides();
+            resetAutoAdvance();
+        });
+    });
+
+    // Initialize auto advance
+    resetAutoAdvance();
+
+    // Initialize slides
+    updateSlides();
+
+    // pause on hover 
+    carousel.addEventListener('mouseenter', () => {
+    clearInterval(autoAdvanceTimer);
+    });
+
+    carousel.addEventListener('mouseleave', () => {
+    resetAutoAdvance();
+    });
+
+</script>

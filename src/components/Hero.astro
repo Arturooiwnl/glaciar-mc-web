@@ -3,13 +3,13 @@ import RocketIcon from "./icons/rocketIcon.astro"
 import DiscordIcon from "./icons/discordIcon.astro"
 ---
 <section id="inicio" class="relative flex flex-col mt-20 pb-5 px-10 sm:px-10 scroll-mt-36 justify-center items-center">
-    <header class="flex flex-col items-center justify-center dark:text-gray-300 text-gray-800 my-10">
-        <div class="text-center mb-5">
+    <header class="hero flex flex-col items-center justify-center dark:text-gray-300 text-gray-800 my-10">
+        <div class="logo text-center mb-5">
             <img class="size-56 animate-float animate-iteration-count-infinite" src="/logo.png" alt="">
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-10 w-full max-w-4xl">
 
-            <div class="h-full relative group overflow-hidden rounded-xl shadow-md p-4 bg-gradient-to-r from-[#7ADBF7] via-[#4AB5E4] to-[#2A6BA9] flex flex-col justify-center items-start hover:scale-99 transition-all duration-400">
+            <div class="bento-el-1 animate-delay-150 h-full relative group overflow-hidden rounded-xl shadow-md p-4 bg-gradient-to-r from-[#7ADBF7] via-[#4AB5E4] to-[#2A6BA9] flex flex-col justify-center items-start hover:scale-99 transition-all duration-400">
     
                 <div class="absolute -top-10 -left-10 w-40 h-40 bg-sky-600 rounded-full blur-2xl transition-transform duration-1000 group-hover:translate-x-4 group-hover:translate-y-4"></div>
                 <div class="absolute bottom-0 right-0 w-32 h-32 bg-sky-900 rounded-full blur-2xl transition-transform duration-1000 group-hover:-translate-x-4 group-hover:-translate-y-4"></div>
@@ -27,7 +27,7 @@ import DiscordIcon from "./icons/discordIcon.astro"
                 </div>
             </div>
                 
-            <div class="h-full relative group overflow-hidden rounded-xl shadow-md p-4 bg-gradient-to-r from-[#7ADBF7] via-[#4AB5E4] to-[#2A6BA9] flex flex-col justify-center items-start hover:scale-99 transition-all duration-400">
+            <div class="bento-el-2 animate-delay-300 h-full relative group overflow-hidden rounded-xl shadow-md p-4 bg-gradient-to-r from-[#7ADBF7] via-[#4AB5E4] to-[#2A6BA9] flex flex-col justify-center items-start hover:scale-99 transition-all duration-400">
     
                 <div class="absolute -top-10 -left-10 w-40 h-40 bg-sky-600 rounded-full blur-2xl transition-transform duration-1000 group-hover:translate-x-4 group-hover:translate-y-4"></div>
                 <div class="absolute bottom-0 right-0 w-32 h-32 bg-sky-900 rounded-full blur-2xl transition-transform duration-1000 group-hover:-translate-x-4 group-hover:-translate-y-4"></div>
@@ -66,12 +66,30 @@ import DiscordIcon from "./icons/discordIcon.astro"
                 </div>
             </div>
 
-            <div class="h-full col-span-1 sm:col-span-2 rounded-xl overflow-hidden">
+            <div class="bento-el-3 animate-delay-400 h-full col-span-1 sm:col-span-2 rounded-xl overflow-hidden">
                 <img class="mask-b-from-20% mask-b-to-80%" src="/placeholder-1.png" alt="Imagen del Servidor" class="w-full h-full object-cover">
             </div>
         </div>
     </header>
 </section>
+
+<script is:inline type="module">
+    import { animate, inView } from "https://cdn.jsdelivr.net/npm/motion@12.9.0/+esm"
+  
+    inView(".hero .logo", (element) => {
+      animate(
+        element,
+        { opacity: [0, 1], y: [-50, 0] },
+        { duration: 0.8, easing: 'ease-out' }
+      )
+    }, { once: true })
+  
+    for (let i = 1; i <= 4; i++) {
+  inView(`.bento-el-${i}`, (el) => {
+    el.classList.add('animate-fade-in');
+  }, { once: true });
+}
+</script>
   
 <script is:inline>
 

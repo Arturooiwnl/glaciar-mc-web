@@ -1,18 +1,15 @@
----
-import RocketIcon from "./icons/rocketIcon.astro"
-import DiscordIcon from "./icons/discordIcon.astro"
----
-<section id="sobre-nosotros" class="relative flex flex-col pb-24 px-10 sm:px-10 scroll-mt-36 justify-center items-center overflow-hidden">
-    <!-- Título -->
+
+<section id="sobre-nosotros" class="about relative flex flex-col h-screen pb-28 px-10 sm:px-10 justify-center items-center overflow-hidden">
+
     <header class="flex flex-col items-center justify-center dark:text-gray-300 text-gray-800 my-10">
-      <div class="text-center mb-5">
+      <div class="text-center mt-10 mb-5">
         <h1 class="text-4xl sm:text-5xl font-Chakra font-bold bg-gradient-to-r from-[#7ADBF7] via-[#4AB5E4] to-[#2A6BA9] bg-clip-text text-transparent">Sobre GlaciarMC</h1>
       </div>
     </header>
 
     <div class="flex flex-col sm:flex-row mb-5 max-w-5xl justify-center items-center">
         
-        <div class=" p-6">
+        <div class="footer p-6">
             <h2 class="text-2xl font-bold text-gray-800 dark:text-white font-Chakra mb-3 text-center">Una experiencia única</h2>
             <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-center w-full sm:w-2xl [&>strong]:text-sky-400">
                 <strong>GlaciarMC</strong> es un servidor de Minecraft que busca ofrecer <strong>aventuras inolvidables</strong>, amistades nuevas y modalidades emocionantes diseñadas con pasión y dedicación.
@@ -23,7 +20,7 @@ import DiscordIcon from "./icons/discordIcon.astro"
 
     <div class="max-w-6xl w-full grid grid-cols-1 sm:grid-cols-2 z-10 gap-5">
 
-        <div class="group overflow-hidden relative border border-gray-500/20 hover:border-gray-500/40 transition-all duration-300 bg-gradient-to-br rounded-2xl from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/10 p-6">
+        <div class="feature animate-delay-300 feature-1 group overflow-hidden relative border border-gray-500/20 hover:border-gray-500/40 transition-all duration-300 bg-gradient-to-br rounded-2xl from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/10 p-6">
             <div class="flex items-center gap-3 mb-3">
                 <i class="group-hover:scale-110 transition-all duration-300 fa-solid fa-rocket text-3xl text-[#7ADBF7]"></i>
                 <h3 class="text-xl font-bold text-gray-800 dark:text-white font-Chakra group-hover:text-[#5A9FD6] transition-colors duration-300">Modalidades</h3>
@@ -32,7 +29,7 @@ import DiscordIcon from "./icons/discordIcon.astro"
             <i class="absolute fa-solid fa-rocket text-7xl text-[#5A9FD6] -bottom-2 -z-10 right-[-10px] -rotate-90 group-hover:scale-115 transform group-hover:translate-x-[-5px] group-hover:translate-y-[-5px] transition-all duration-500"></i>
         </div>
         
-        <div class="group overflow-hidden relative border border-gray-500/20 hover:border-gray-500/40 transition-all duration-300 bg-gradient-to-br rounded-2xl from-sky-50 to-indigo-50 dark:from-sky-900/20 dark:to-indigo-900/10 p-6">
+        <div class="feature animate-delay-400 feature-2 group overflow-hidden relative border border-gray-500/20 hover:border-gray-500/40 transition-all duration-300 bg-gradient-to-br rounded-2xl from-sky-50 to-indigo-50 dark:from-sky-900/20 dark:to-indigo-900/10 p-6">
             <div class="flex items-center gap-3 mb-3">
                 <i class="fa-solid fa-people-group text-3xl text-[#4AB5E4]"></i>
                 <h3 class="text-xl font-bold text-gray-800 dark:text-white font-Chakra group-hover:text-[#5A9FD6] transition-colors duration-300">Comunidad</h3>
@@ -41,7 +38,7 @@ import DiscordIcon from "./icons/discordIcon.astro"
             <i class="absolute fa-solid fa-people-group text-7xl text-[#5A9FD6] -bottom-2 -z-10 right-[-10px] -rotate-20 group-hover:scale-115 transform group-hover:translate-x-[-5px] group-hover:translate-y-[-5px] transition-all duration-500"></i>
         </div>
         
-        <div class="group overflow-hidden relative border border-gray-500/20 hover:border-gray-500/40 transition-all duration-300 bg-gradient-to-br rounded-2xl from-indigo-50 to-blue-50 dark:from-indigo-900/20 dark:to-blue-900/10 p-6">
+        <div class="feature animate-delay-500 feature-3 group overflow-hidden relative border border-gray-500/20 hover:border-gray-500/40 transition-all duration-300 bg-gradient-to-br rounded-2xl from-indigo-50 to-blue-50 dark:from-indigo-900/20 dark:to-blue-900/10 p-6">
             <div class="flex items-center gap-3 mb-3">
                 <i class="fa-solid fa-shield-halved text-3xl text-[#5A9FD6]"></i>
                 <h3 class="text-xl font-bold text-gray-800 dark:text-white font-Chakra group-hover:text-[#5A9FD6] transition-colors duration-300">Seguridad</h3>
@@ -50,7 +47,7 @@ import DiscordIcon from "./icons/discordIcon.astro"
             <i class="absolute fa-solid fa-shield-halved text-7xl text-[#5A9FD6] -bottom-1.5 -z-10 right-[-10px] rotate-20 group-hover:scale-115 transform group-hover:translate-x-[-5px] group-hover:translate-y-[-5px] transition-all duration-500"></i>
         </div>
         
-        <div class="group overflow-hidden relative border border-gray-500/20 hover:border-gray-500/40 transition-all duration-300 bg-gradient-to-br rounded-2xl from-blue-50 to-sky-50 dark:from-blue-900/20 dark:to-sky-900/10 p-6">
+        <div class="feature animate-delay-700 feature-4 group overflow-hidden relative border border-gray-500/20 hover:border-gray-500/40 transition-all duration-300 bg-gradient-to-br rounded-2xl from-blue-50 to-sky-50 dark:from-blue-900/20 dark:to-sky-900/10 p-6">
             <div class="flex items-center gap-3 mb-3">
                 <i class="fa-solid fa-calendar-days text-3xl text-[#5A9FD6]"></i>
                 <h3 class="text-xl font-bold text-gray-800 dark:text-white font-Chakra group-hover:text-[#5A9FD6] transition-colors duration-300">Eventos</h3>
@@ -60,3 +57,30 @@ import DiscordIcon from "./icons/discordIcon.astro"
         </div>
     </div>
   </section>
+
+  <script is:inline type="module">
+    import { animate, inView } from "https://cdn.jsdelivr.net/npm/motion@12.9.0/+esm"
+  
+    inView(".about header", (element) => {
+      animate(
+        element,
+        { opacity: [0, 1], y: [-50, 0] },
+        { duration: 0.8, easing: 'ease-out' }
+      )
+    }, { once: true })
+
+    inView(".about .footer", (element) => {
+      animate(
+        element,
+        { opacity: [0, 1], y: [-50, 0] },
+        { duration: 1, easing: 'ease-out' }
+      )
+    }, { once: true })
+  
+    for (let i = 1; i <= 4; i++) {
+  inView(`.feature-${i}`, (el) => {
+    el.classList.add('animate-fade-in');
+  }, { once: true });
+}
+  </script>
+  
