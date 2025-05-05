@@ -5,6 +5,9 @@ import '@fontsource/chakra-petch/700.css';
 
 import {description, siteName, imageMetaAlt} from './constLayout'
 
+import { STAFFS } from '../data/staff';
+
+
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
@@ -78,6 +81,11 @@ inView(`.bento-el-${i}`, (el) => {
   el.classList.add('animate-fade-in');
 }, { once: true });
 }
+  for (let i = 1; i <= 4; i++) {
+inView(`.staff-el-${i}`, (el) => {
+  el.classList.add('animate-fade-in');
+}, { once: true });
+}
 
 // ABOUT
 inView(".about header", (element) => {
@@ -96,11 +104,11 @@ inView(".about .footer", (element) => {
   )
 }, { once: true })
 
-for (let i = 1; i <= 4; i++) {
-inView(`.feature-${i}`, (el) => {
-el.classList.add('animate-fade-in');
-}, { once: true });
-}
+	for (let i = 1; i <= 4; i++) {
+	inView(`.feature-${i}`, (el) => {
+	el.classList.add('animate-fade-in');
+	}, { once: true });
+	}
 
 // MODALITIES
 
@@ -109,6 +117,7 @@ inView(".carousel-container", (el) => {
     }, { once: true });
 
 
+// STAFF
 </script>
 
 <style is:global>

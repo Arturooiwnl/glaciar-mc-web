@@ -2,6 +2,15 @@
 
 @plugin "@midudev/tailwind-animations";
 
+@font-face {
+    font-family: Minecraft-Nicks;
+    font-style: normal;
+    font-weight: 200 700;
+    font-display: swap;
+    src: url("/fonts/Minecraft-Regular.woff2") format("woff2");
+}
+
 @theme{
     --font-Chakra: 'Chakra Petch', sans-serif;
+    --font-NickMC: 'Minecraft-Nicks',sans-serif;
 }
