@@ -43,7 +43,7 @@ const { title } = Astro.props;
 	<meta name="robots" content="max-image-preview:large" />
     <title>{title}</title>
 </head>
-<body class="dark:bg-slate-950 bg-white">
+<body class="relative dark:bg-slate-950 bg-white">
 	<div class="fixed inset-0 -z-10 w-full min-h-screen dark:bg-slate-950 bg-white">
 		<div class="absolute inset-0 bg-white dark:bg-gray-950 overflow-hidden">
 			<svg class=" absolute inset-0 h-full w-full opacity-20 dark:opacity-30" viewBox="0 0 100 100" preserveAspectRatio="none">
@@ -59,7 +59,7 @@ const { title } = Astro.props;
 	</div>
 	<Header />
 	<slot />
-	<!-- <Footer /> -->
+	<Footer />
 </body>
 </html>
 <script type="module">
@@ -113,6 +113,12 @@ inView(".about .footer", (element) => {
 // MODALITIES
 
 inView(".carousel-container", (el) => {
+    el.classList.add('animate-fade-in');
+    }, { once: true });
+
+// SCROLL TO TOP BUTTON
+
+inView(".scroll-to-top", (el) => {
     el.classList.add('animate-fade-in');
     }, { once: true });
 

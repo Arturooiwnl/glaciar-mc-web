@@ -20,7 +20,7 @@ import {STAFFS} from '../data/staff'
     <div class="max-w-6xl w-full grid grid-cols-1 sm:grid-cols-3 gap-6 z-10">
         {
             STAFFS.map((staff, index) => (
-            <article class={`staff-el-${index+1} animate-delay-[${100 * (index + 1)}ms] group relative flex flex-col justify-center items-center`}>
+            <article class={`staff-el-${index+1} animate-delay-${100 * (index + 1)} group relative flex flex-col justify-center items-center`}>
             <span class="text-gray-50 font-NickMC text-lg sm:text-2xl bg-black/50 px-2 py-1 opacity-100 sm:opacity-0 group-hover:opacity-100 transition-all duration-300 rounded-sm">{staff.name}</span>
                 <img class="mask-b-from-20% mask-b-to-80% group-hover:scale-105 transition-all duration-300" src={`/images/${staff.image}`}  alt={`Imagén del staff ${staff.name} de GlaciarMC`}/>
            
